@@ -60,7 +60,7 @@
 .r-buttons button{
     width: 2.5rem;
     height: 2.5rem;
-    border-radius: 50%;
+    border-radius: 20%;
     border: none;
     display: flex;
     justify-content: center;
@@ -68,4 +68,12 @@
     font-size: 1.5rem;
     background: var(--blueCard);
     color: blue;
+}
+
+.r-buttons>:nth-child(1){
+    background-color: #EEEEFF;
+}
+
+.r-buttons>:nth-child(2){
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25);
 }
