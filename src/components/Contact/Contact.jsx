@@ -1,5 +1,8 @@
 import React from 'react'
 import './Contact.css'
+import {MdCall} from 'react-icons/md'
+import {BsFillChatDotsFill} from 'react-icons/bs'
+import {HiChatBubbleBottomCenter} from 'react-icons/hi2'
 
 const Contact = () => {
   return (
@@ -14,18 +17,70 @@ const Contact = () => {
                     we believe in doing business with you
                 </span>
 
-                <div className="flexColStart contactModes">
+                <div className="flexStart contactModes">
                     {/* firts row */}
                     <div className="flexColStart row">
+                        {/* first mode */}
                         <div className="flexColCenter mode">
                             <div className="flexStart">
                                 <div className="flexCenter icon">
-                                    <i className="fa fa-phone-alt"></i>
+                                    <MdCall size={25}/>
                                 </div>
                                 <div className="flexColStart detail">
-                                    <span>Call Us</span>
-                                    <span>+1 234 456 7890</span>
+                                    <span className='primaryText'>Call Us</span>
+                                    <span className='secondaryText'>+1 234 456 7890</span>
                                 </div>
+                            </div>
+                            <div className="flexCenter button">
+                                Call Now
+                            </div>
+                        </div>
+                        {/* second mode */}
+                        <div className="flexColCenter mode">
+                            <div className="flexStart">
+                                <div className="flexCenter icon">
+                                    <BsFillChatDotsFill size={25}/>
+                                </div>
+                                <div className="flexColStart detail">
+                                    <span className='primaryText'>Chat</span>
+                                    <span className='secondaryText'>+1 234 456 7890</span>
+                                </div>
+                            </div>
+                            <div className="flexCenter button">
+                                Chat
+                            </div>
+                        </div>
+                    </div>
+                    {/* second row */}
+                    <div className="flexColStart row">
+                        {/* first mode */}
+                        <div className="flexColCenter mode">
+                            <div className="flexStart">
+                                <div className="flexCenter icon">
+                                    <MdCall size={25}/>
+                                </div>
+                                <div className="flexColStart detail">
+                                    <span className='primaryText'>Vide Call</span>
+                                    <span className='secondaryText'>+1 234 456 7890</span>
+                                </div>
+                            </div>
+                            <div className="flexCenter button">
+                                Video Call
+                            </div>
+                        </div>
+                        {/* second mode */}
+                        <div className="flexColCenter mode">
+                            <div className="flexStart">
+                                <div className="flexCenter icon">
+                                    <BsFillChatDotsFill size={25}/>
+                                </div>
+                                <div className="flexColStart detail">
+                                    <span className='primaryText'>Message</span>
+                                    <span className='secondaryText'>+1 234 456 7890</span>
+                                </div>
+                            </div>
+                            <div className="flexCenter button">
+                                Send Message
                             </div>
                         </div>
                     </div>
