@@ -80,8 +80,8 @@ const Hero = () => {
         {/* Right Side */}
         <motion.div
           className="flexCenter hero-right"
-          initial={{ y: "2rem", opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          initial={{ x: "2rem", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 2.3, type: "spring", delay: 0.2 }}
         >
           <div className="image-container">
