@@ -60,3 +60,35 @@
     background: var(--blue-gradient);
     color: white;
 }
+
+@media screen and (max-width: 1085px) {
+    .c-container{
+        flex-direction: column;
+    }
+
+    .c-right{
+        justify-content: center;
+        display: flex;
+    }
+
+    
+
+    .contactModes{
+        width: 100%;
+    }
+
+    .row{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .mode{
+        width: 100%;
+    }
+
+    @media screen and (max-width: 500px) {
+        .contactModes{
+           flex-direction: column;
+        }
+    }
+}

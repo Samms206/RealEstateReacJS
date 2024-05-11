@@ -49,3 +49,13 @@
 .accordionButton .primaryText{
     font-size: 1.2rem;
 }
+@media screen and (max-width: 810px) {
+    .v-container{
+        flex-direction: column;
+    }
+    @media screen and (max-width: 768px) {
+        .accordionButton .primaryText{
+            font-size: 0.8rem;
+        }
+    }
+}
