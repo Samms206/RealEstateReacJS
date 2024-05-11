@@ -11,7 +11,9 @@ const Hero = () => {
         {/* Left Side */}
         <div className="flexColStart hero-left">
           <div className="hero-title">
-            <div className="orange-circle" />
+            <motion.div className="orange-circle" initial={{ y: "2rem", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 3, type: "spring" }}/>
             <motion.h1
               initial={{ y: "2rem", opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -76,11 +78,16 @@ const Hero = () => {
         {/* end of left side */}
 
         {/* Right Side */}
-        <div className="flexCenter hero-right">
+        <motion.div
+          className="flexCenter hero-right"
+          initial={{ y: "2rem", opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 2.3, type: "spring", delay: 0.2 }}
+        >
           <div className="image-container">
             <img src="./hero-image.png" alt="hero" />
           </div>
-        </div>
+        </motion.div>
         {/* end right side */}
       </div>
     </section>
