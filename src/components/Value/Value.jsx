@@ -10,7 +10,7 @@ import {
 import "react-accessible-accordion/dist/fancy-example.css";
 import {MdOutlineArrowDropDown} from 'react-icons/md'
 import "./Value.css"
-import { data } from '../../utils/accordion';
+import data from '../../utils/accordion';
 
 const Value = () => {
   return (
@@ -37,23 +37,29 @@ const Value = () => {
                     preExpanded={[0]}
                     >
                     {
-                        data.map((item, index) => {
+                        data.map((item, i) => {
+                            const [className, setClassName] = React.useState("null");
                             return(
-                                <AccordionItem className='accordionItem'>
+                                <AccordionItem className={`accordionItem ${className}`} key={i} uuid={i}>
                                     <AccordionItemHeading>
-                                        <AccordionItemButton>
+                                        <AccordionItemButton className="flexCenter accordionButton">
+                                            
+                                            <AccordionItemState>
+                                                {({expanded}) => expanded ? setClassName("expanded") : setClassName("collapsed") }
+                                            </AccordionItemState>
+
                                             <div className="flexCenter icon">{item.icon}</div>
-                                            <div className="flexColStart details">
-                                                <span className="secondaryText">{item.heading}</span>
-                                                <span className="primaryText">{item.detail}</span>
-                                            </div>
+                                            <span className="primaryText">{item.heading}</span>
                                             <div className="flexCenter icon">
-                                                <MdOutlineArrowDropDown/>
+                                                <MdOutlineArrowDropDown size={20}/>
                                             </div>
                                         </AccordionItemButton>
                                     </AccordionItemHeading>
+                                    <AccordionItemPanel>
+                                        <p className="secondaryText">{item.detail}</p>
+                                    </AccordionItemPanel>
                                 </AccordionItem>
-                            )
+                            );
                             })
                     }
                 </Accordion>
